@@ -1,0 +1,23 @@
+How to add background music in processing: 
+
+import ddf.minim.*;
+
+AudioPlayer player;
+Minim minim;//audio context
+
+
+
+void setup() {
+  smooth();
+  minim = new Minim(this);
+  bmusic = minim.loadFile("outrage.mp3", 1024);
+  bmusic.play();
+}
+
+
+void stop()
+{
+  bmusic.close();
+  minim.stop();
+  super.stop();
+}
